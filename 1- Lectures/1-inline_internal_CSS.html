@@ -1,0 +1,28 @@
+<!-- Thi tutorial is linked with external inline_internal_externalcss
+CSS file. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal and External CSS</title>
+    
+    <!-- Later property will 
+        override the previous property unless "!important" specifies.-->
+    
+    <style>
+        h2, p {
+            
+            color: red ;
+            background-color:yellow !important;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="inline_internal_externalcss.css">
+</head>
+
+<body>
+    <h2 style="color: blue;">Lorem ipsum dolor sit amet consectetur.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam sit quisquam itaque eligendi amet debitis.</p>
+</body>
+</html>

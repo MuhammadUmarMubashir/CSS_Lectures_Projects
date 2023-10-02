@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Font, Color, border and background image.</title>
+
+    <style>
+        h2 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;  /*Pixel is 1/96th of an inch.*/
+            line-height: 2em;
+            font-weight: bold;
+            font-style: italic;
+            background-color: #ffcc2323;
+            /*The last twp values/alpha(a) decide the 
+            transparency/opacity of the color. 
+            0<a<1
+            0 means very close to white. (oopposite of rgb colors)
+            1 means very close to dark. (oopposite of rgb colors)*/
+            
+        }
+
+        #para1 {
+            color: black;            /*Color by name.*/
+            background-color: yellow;
+            
+            height: 100px;   /*Height and width of background color.*/
+            width: 500px;
+
+            /*border-width: 4px;
+            border-style:solid;
+            border-color: blue;*/
+
+            border: 4px solid blue; /*Its explanation is above.*/
+            border-radius: 8px;
+
+        }
+        
+        #para2 {
+            color:rgb(255, 0, 0);     /*Color by RGB value.*/
+            background-color: yellow;
+            height: 70px;
+            border-top: 4px solid black;
+            border-bottom: 4px solid green;
+            border-left: 8px solid violet;
+            border-right: 8px solid orange;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 40px;  
+            /*border-color: black green violet orange;*/      
+        }
+
+        #para3 {
+            color: black;    /*Color by Hexhadecimal value.*/
+            font-size: medium;
+            height: 400px;
+            width: 500px;
+            border: 4px solid green;  /*border style is compulsory.*/
+            background-image: url(https://www.ec.com.pk/assets/img/propakistani.webp);
+            background-repeat: no-repeat;
+            background-position: right bottom;  /*x-axis  y-axis*/
+            background-size: 300px;
+            margin-left: 300px;
+            border-radius: round;
+        }
+
+        #para4 {
+            background-image: linear-gradient(to top left, green, magenta);
+            background-image: radial-gradient(to top left, green, magenta);
+            background-image: radial-gradient(green, magenta, blue);
+            background-image: conic-gradient(green, magenta, blue);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, laudantium.</h2>
+
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ullam.
+    </p>
+
+    <p id="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ullam.
+    </p>
+
+    <p id="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ullam Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quia nulla similique nesciunt rerum tempora molestias qui harum quo cum vero velit iusto iure blanditiis, quasi ut itaque autem corporis facilis possimus hic. Exercitationem delectus, aliquam dolores deserunt culpa in.
+    </p>
+
+    <p id="para4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, ullam Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam quia nulla similique nesciunt rerum tempora molestias qui harum quo cum vero velit iusto iure blanditiis, quasi ut itaque autem corporis facilis possimus hic. Exercitationem delectus, aliquam dolores deserunt culpa in.
+    </p>
+    
+</body>
+</html>

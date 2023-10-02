@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model, Margin and Padding</title>
+
+<!--The distance between content and the border is called padding.
+    The distance between border and the next border is called margin.
+    Padding exist inside the border and margin exist outside the border. 
+-->
+    <style>
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(153 236 243);
+        }
+
+        .container {
+            background-color: rgb(182 223 226);
+            border: 3px solid rgb(41, 136, 145);
+            /*padding: 15px;
+            margin: 20px;*/
+
+            padding-top: 20px;
+            padding-right: 40px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            /*Short-hand for padding:*/
+            /*padding: top right bottom left (Remember: Clockwise)*/
+            padding: 20px 30px 30px 30px;
+            padding: 20px 30px;
+            
+            /*And margin:*/
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            /*Short-hand for margin:*/
+            /*margin: top right bottom left (Remember: Clockwise)*/
+            margin: 30px 20px 30px 20px;
+            margin: 30px 30px;
+            border-radius: 20px;
+            margin-right: 700px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Any content in CSS will change/render in rectangle form.
+    That rectangle form will be invisible to the user.Very important. 
+    -->
+    <div class="container">
+            <h2>This is my heading.</h2>
+            <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium, accusantium hic accusamus dolorum modi rem sequi recusandae. Distinctio facere ipsum eum neque cupiditate aperiam voluptatem suscipit expedita, quibusdam, eligendi quo! Alias perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?</p>
+    </div>
+
+    <div class="container">
+        <h2>This is my heading.</h2>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium, accusantium hic accusamus dolorum modi rem sequi recusandae. Distinctio facere ipsum eum neque cupiditate aperiam voluptatem suscipit expedita, quibusdam, eligendi quo! Alias perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?
+    
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>This is my heading.</h2>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste praesentium, accusantium hic accusamus dolorum modi rem sequi recusandae. Distinctio facere ipsum eum neque cupiditate aperiam voluptatem suscipit expedita, quibusdam, eligendi quo! Alias perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?perspiciatis quas sapiente nostrum facere assumenda blanditiis dolore?</p>
+
+    </div>
+    
+</body>
+</html>

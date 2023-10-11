@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property in CSS</title>
+<!-- Display property is used how to show the element on the web 
+    page and used to convert the block element into inline element
+    and vice versa. 
+
+    display: block;
+    display: inline;
+    display: inline-block;
+
+    1- Display Block Element: see notes
+    Box-sizing:border-box: see notes-->
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            margin: auto;
+            width: 1000px;
+        }
+
+        img {
+            display: block; /*Accepting all w,h,p,m properties*/
+            width: 50px;
+            /*Use to convert the inline element into block line 
+            element and set it at center by using 
+            margin:auto option.*/
+            margin: auto;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;/*Accepting all w,h,p,m properties*/
+            border: 2px solid black;
+            background-color: rgb(211, 152, 152);
+            padding: 10px;
+            margin: 4px 0px;
+            width: 33%;
+            /*Including margin & padding, width will remain because
+            of box-sizing:border-box same as given by the developer*/
+        }
+
+        .container {
+            margin: auto;
+            width: 1000px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="top">
+        <img src="https://constitutionnet.org/sites/default/files/pakistan-1715201_1280.jpg" alt="Pakistan Flag">
+
+        <h2>Welcome to my Blog</h2>
+    </header>
+
+
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam, aut nostrum, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos sed odit dicta animi consequatur repellat cum distinctio cupiditate voluptas.dolorem praesentium!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus optio praesentium non nam iusto laborum voluptate sint? Adipisci, qui perferendis? aut nostrum, dolorem praesentium!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam, Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus debitis rerum, maxime enim neque voluptatibus eaque exercitationem tenetur sint.aut nostrum, dolorem praesentium!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam, aut nostrum, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos sed odit dicta animi consequatur repellat cum distinctio cupiditate voluptas.dolorem praesentium!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam,Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus optio praesentium non nam iusto laborum voluptate sint? Adipisci, qui perferendis? aut nostrum, dolorem praesentium!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita optio perferendis dolorum
+            provident laboriosam, Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla doloribus debitis rerum, maxime enim neque voluptatibus eaque exercitationem tenetur sint.aut nostrum, dolorem praesentium!</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

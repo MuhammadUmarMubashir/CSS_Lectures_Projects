@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            border: 2px solid grey;
+            text-align: center;
+            border-radius: 55px;
+            display: block;
+            width: 258px;
+            height: 43px;
+            padding: 14px;
+            margin: 15px auto;
+        }
+
+        @media (max-width: 300px) {
+            #item1 {
+                display: block;
+                background-color: aqua;
+                color: black;
+            }
+        }
+
+        @media (min-width: 301px) and (max-width: 600px) {
+            #item2 {
+                background-color: greenyellow;
+                color: black;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px) {
+            #item3 {
+                background-color: rgb(47, 61, 255);
+                color: black;
+            }
+        }
+
+        @media (min-width: 901px) and (max-width: 1200px) {
+            #item4 {
+                background-color: rgb(231, 255, 47);
+                color: black;
+            }
+        }
+
+        .Container {
+            background-color: bisque;
+            border: 2px solid #000;
+            width: 450px;
+            padding: 2px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .boxleft {
+            background-color: rgb(149, 206, 207);
+            border: 2px solid blue;
+            width: 47%;
+            margin: 10px;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .boxright {
+            border: 2px solid red;
+            background-color: none;
+            width: 47%;
+            margin: 10px;
+            padding: 2px;
+        }
+
+        p {
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        img {
+            width: 170px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        @media (max-width: 1280px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">Mobile</div><br>
+        <div class="item" id="item2">Computer</div><br>
+        <div class="item" id="item3">Laptop</div><br>
+        <div class="item" id="item4">Tablet</div>
+    </div>
+<br><hr>
+
+    <div class="Container">
+        <div class="boxleft">
+            <p>This is box 1.</p><br><br>
+            <p>This is box 2.</p>
+        </div>
+
+        <div class="boxright">
+            <img src="/Images/Food.jpg" alt="Loading" loading="lazy">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

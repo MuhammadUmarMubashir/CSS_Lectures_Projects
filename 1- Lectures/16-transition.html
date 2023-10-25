@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <!-- Transition: Moving from one stylish state to another 
+    due to hover is called transition. Its a subset of animation. 
+    Its a child of animation. Its add smoothness to the element.
+    Where smoothness is required, use transition.
+
+    Animation: A series of complex transition movement is called animation.
+    Its a superscript of transition. Its a parent of transition.
+-->
+
+    <style>
+
+        #box {
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            align-items: center;
+            justify-content: center;
+
+            transition-property: background-color;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 3s;
+
+            /*Transition Shorthand Property:
+
+            transition: Transition-property     Transition-duration 
+            Transition-timing-function          Transition-delay
+
+            Short-Key: (PDTD)
+            */
+            /*transition: background-color 4s ease-in-out 3s;*/
+            transition: all 0.3s linear 0.1s;  /*all means for all properties.*/
+            transition: 1s width, 5s height;
+        }
+
+        #box:hover {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            border-radius: 60px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>This is CSS Transition tutorial</h2>
+    <div class="container">
+        <div id="box">
+            This is Box.
+        </div>
+    </div>
+    
+</body>
+</html>

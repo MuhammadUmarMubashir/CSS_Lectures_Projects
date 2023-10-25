@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+
+    <style>
+        /* The var() function is used to insert the value of a CSS 
+        variable. 
+        
+        The variable name (must start with two dashes). 
+
+        Define the color here and it will reflect where it will
+        be used.*/
+
+        /*This is global variable in root and can be used whereer is needed.*/
+        :root {
+            --primary-color: cyan;
+            --secondary-color: orange;
+            --maxwidth: 60px;
+        }
+
+        
+
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: var(--primary-color); /*var is a function.*/
+            border: 4px solid green;
+            margin: 10px 10px;
+            max-width: var(--maxwidth);
+
+
+            --bg-color: #4b976c;
+            background-color: var(--bg-color);    /*Its local variable and 
+            can't be used outside of item class.*/
+        }
+
+
+        .container {
+            display: flex;
+            background-color: var(--secondary-color);
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        
+    </div>
+
+
+</body>
+
+</html>

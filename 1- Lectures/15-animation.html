@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & KeyFrame</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: 2px solid green;
+            background-color: black;
+            height: 1000px;
+            display: flex;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            padding: 20px;
+            margin: 20px;
+            position: relative;/*Its compulsory in case of animation.*/
+            animation-name: umar1;
+
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            /*animation-delay: 3s;
+            animation-fill-mode: backwards;
+            animation-timing-function: ease-in-out;
+            animation-direction: reverse;*/
+
+            /*Animation Shorthand Property:
+
+            Animation: animation-name           animation-duration 
+            animation-timing-function           animation-delay 
+            animation-iteration-count           animation-fill-mode
+            Short-Key: (NDTDIF)
+            */
+            animation: umar1 4s ease-in 1s 2 backwards; 
+        }
+
+        /*It stores the information of animation. */
+        @keyframes umar {
+            from {
+                background-color: chartreuse;
+            }
+
+            to {
+                background-color: red;
+            }
+        }
+
+        @keyframes umar1 {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 700px;
+                top: 0px;
+            }
+
+            50% {
+                left: 700px;
+                top: 300px;
+            }
+
+            75% {
+                left: 0px;
+                top: 300px;
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .container-box{
+            background-color: antiquewhite;
+            border: 2px solid black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .box1 {
+            width: 250px;
+            height: 60px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 3px solid yellowgreen;
+            margin: 10px;
+            position: relative;
+            animation: rightMovement 3s linear 1s infinite none running alternate;
+        }
+
+        @keyframes rightMovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+
+            to {
+                top: 0;
+                left: 800px;
+            }
+        }
+
+        .box2 {
+            width: 250px;
+            height: 60px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 3px solid yellowgreen;
+            margin: 10px;
+            position: relative;
+            animation: leftMovement 3s linear 1s infinite none running alternate;
+        }
+
+        @keyframes leftMovement {
+            from {
+                top: 340px;
+                left: 800px;
+            }
+
+            to {
+                top: 340px;
+                left: 0px;
+            }
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            background-color: blue;
+            border-radius: 60px;
+            border: 3px solid yellowgreen;
+            position: relative;
+            top: 50px;
+            left: 500px;
+            animation: circleMovement 3s linear infinite none running alternate;
+        }
+        
+
+        @keyframes circleMovement{
+            0% {
+                top: 5px;
+                left: 100px;
+            }
+            
+            50% {
+                top: 100px;
+                left: 900px;
+            }
+
+            100% {
+                top: 200px;
+                left: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            This is a Box.
+        </div>
+    </div>
+
+    <div class="container-game">
+        <div class="box1">
+        </div>
+
+        <div class="box2">
+        </div>
+
+        <div class="circle">
+        </div>
+    </div>
+
+</body>
+
+</html>

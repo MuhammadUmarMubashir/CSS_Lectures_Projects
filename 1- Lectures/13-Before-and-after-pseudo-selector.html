@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>My First Website Layout - Before and After Pseudo Selector</title>
+
+    <style>
+        /*Setting all commen features over here.*/
+        body {
+            background-color: black;
+            color: white;
+            padding: 0;
+            margin: 0;
+            height: 1800px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /*Technique to set background image using before psuedo selector */
+        header::before {
+            content: "";
+            background: url("https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=867&q=80") no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 1px -3px 18px white;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .navigation {
+            display: flex;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+
+        a {
+            display: flex;
+            padding: 26px 13px;
+            text-decoration: none;
+            color: white;
+        }
+
+        a[input="text"] {
+            display: flex;
+            border: 2px solid red;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        /*Pseudo Classes*/
+        a:link, a:visited {
+            color: white
+        }
+
+        a:hover, a:active {
+            text-decoration: underline;
+        }
+
+        section {
+            margin: 2px 230px;
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /*These are called pseudo elements.*/
+        /*section::before {
+            content: "This is a content added before section.";
+        }*/
+
+        section::after {
+            content: "This is a content added after section.";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <a href="#home" class="item" id="item-1">Home</a>
+                <a href="#services" class="item" id="item-2">Services</a>
+                <a href="#about" class="item" id="item-3">About</a>
+                <a href="#FAQs" class="item" id="item-4">FAQs</a>
+                <a href="#Blog" class="item" id="item-4">Blog</a>
+                <a href="#contact Us" class="item" id="item-4">Contact Us</a>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>Free Food For all</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eaque sequi iusto impedit obcaecati fugit
+                consequuntur, officiis nesciunt dolorum ducimus minus eligendi soluta commodi distinctio, placeat ad
+                quaerat tempore! Facilis temporibus eum et, nobis minima sint fugit nesciunt maxime dolorum. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Laudantium optio quaerat numquam ut nulla fugit quia dicta
+                minima, saepe aperiam beatae nostrum eum qui accusantium facere veniam nisi accusamus? Deserunt.
+            </p>
+        </section>
+
+
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <!-- The basic difference between CSS grid layout and CSS flexbox 
+    layout is that flexbox was designed for layout in one dimension - 
+    either a row or a column. Grid was designed for two-dimensional 
+    layout - rows, and columns at the same time. e.g timetable,excelsheet,
+    matrix etc. 
+
+    Great cway is to use flexbox and Grid sid by side. 
+
+    Flexbox is for how the content flows either left, right, top or center 
+    alignment.
+    It is specific to the positioning of the centent.
+    Flexbox is 1D. 
+    
+    Grid is for complex layout like header, main, section, article, aside 
+    and footer placemnent in a quick way.
+    It is specific to the layout creation.
+    Grid is 2D. 
+    -->
+    <style>
+        .container {
+            display: grid;    /*same with flexbox*/
+            margin: 0;
+            padding: 0;
+            /*Define the width of columns
+            grid-template-columns: auto auto auto;*/
+
+            /*(no.of colns,width-of-colns)
+            grid-template-columns: repeat(7, auto);*/
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-rows: 70px 70px 70px 70px 70px 70px;
+
+            gap: 10px;
+
+            grid-auto-rows: minmax(200px,auto); /*automatically add 
+            the rows each of size 200px*/
+
+            grid-template-areas: 
+            
+            
+            "hd"  "nav"  "nav"
+            "hd"  "nav"  "nav"
+            "hd"  "nav"  "nav";
+
+            justify-content: center;/*same as flexbox with all values*/
+            align-content: center;/*same as flexbox with all properties*/
+            
+            align-items: center; /*same as flexbox with all properties*/
+        }
+
+        .item {
+            background-color: violet;
+            color: rgb(24, 23, 23);
+            border: 2px solid green;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #item-1 {
+            /*grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-row-start: 1;
+            grid-row-end: 2;*/
+            grid-column: 1 / 2;  /*Column 2 is not included.*/
+            grid-column: 1 / span 6;  /*Column 2 is included.*/
+
+            justify-self: center;   /*Align the child to the centre 
+            along main axis.*/
+            
+            align-self: center;   /*Align the child to the centre 
+            along cross axis.*/
+        }
+        
+        #item-11 {
+
+            /*Shorthand Property:*/
+
+            /*grid-area: grid-row-start/grid-column-start/grid-row-end
+            /grid-column-end 
+            
+            grid-area: rs/cs/re/ce or r/c/r/c     */
+
+            
+            grid-area: 3 / 4 / span 1/ span 3;
+        }
+        
+        #item-8 {
+            grid-area: 3 / 1 / span 2/ span 3;
+        }
+        
+        #item-2 {
+            grid-area: 2 / 1 / span 1/ span 6;
+        }
+        
+        #item-9 {
+            grid-area: 4 / 4 / span 1/ span 3;
+        }
+        
+        #item-18 {
+            grid-area: 5 / 1 / span 3/ span 6;
+        }
+
+        #item-12 {
+            grid-area: 8 / 1 / span 2/ span 6;
+            height: 70px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>CSS Grid tutorial</h2>
+    <div class="container">
+        <div id="item-1" class="item">item-1</div>
+        <div id="item-2" class="item">item-2</div>
+        <div id="item-3" class="item">item-3</div>
+        <div id="item-4" class="item">item-4</div>
+        <div id="item-5" class="item">item-5</div>
+        <div id="item-6" class="item">item-6</div>
+        <div id="item-7" class="item">item-7</div>
+        <div id="item-8" class="item">item-8</div>
+        <div id="item-9" class="item">item-9</div>
+        <div id="item-10" class="item">item10</div>
+        <div id="item-11" class="item">item-11</div>
+        <div id="item-12" class="item">item-12</div>
+        <div id="item-13" class="item">item-13</div>
+        <div id="item-14" class="item">item-14</div>
+        <div id="item-15" class="item">item-15</div>
+        <div id="item-16" class="item">item-16</div>
+        <div id="item-17" class="item">item-17</div>
+        <div id="item-18" class="item">item-18</div>
+        <div id="item-19" class="item">item-19</div>
+        <div id="item-20" class="item">item-20</div>
+        <div id="item-21" class="item">item-21</div>
+        <div id="item-22" class="item">item-22</div>
+        <div id="item-23" class="item">item-23</div>
+        <div id="item-24" class="item">item-24</div>
+
+    </div>
+</body>
+
+</html>

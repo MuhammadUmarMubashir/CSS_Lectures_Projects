@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <!-- Transform: The translation, rotation, titlness,and scaling 
+    of the element is called transform. -->
+
+    <style>
+        .container {
+            height: 150vh;  /*vh means viewport height.*/
+        }
+        
+        .box {
+            display: flex;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.5s linear;  /*Its compulsory to add 
+            smoothness to the box while using transform.*/
+
+        }
+        
+        .box:hover {
+            border-radius: 40px;
+            transform:rotate(45deg);
+            transform: rotate(-90deg);
+            transform: skewx(40deg);
+            transform: scale(2);
+            transform:translate(100px,100px);     
+        }
+
+        /*3D Transform involves only perspective and z direction only.*/
+        /*Perspective is the distance from the z axis to the naked eye.*/
+        .box2 {
+            display: flex;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            background-color: green;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 2rem;
+            margin-left: 30rem;
+
+            transform: perspective(15px) translateZ(-10px);
+            transform: perspective(15px) scaleZ(2);  /*scaling can't be seen
+            with naked eye in z direction.*/
+            transform: perspective(350px) scaleZ(3) rotateX(15deg) 
+            rotateY(30deg); 
+
+            transform: rotateZ(30deg);  /*No need to add perspective 
+            view here. Why?*/
+
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>This is Transform tutorial</h2>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+<br>
+<hr>
+<br>
+        <div class="box2">
+            This is box2
+        </div>
+    </div>
+    
+</body>
+</html>
